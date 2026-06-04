@@ -1,0 +1,40 @@
+artifact_path: file:///C:/Users/Lenovo/OneDrive/Documents/Praktikum%20dan%20Dokumen/python%20Project/dicoding/Membangun%20Sistem%20ML/SMSML/Membangun_model/mlruns/121754710912968073/models/m-e9b0de5bee0f4819989cf9b3d8c0358f/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.13.13
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.9.0
+    skops_trusted_types: null
+is_signature_from_type_hint: false
+mlflow_version: 3.13.0
+model_id: m-e9b0de5bee0f4819989cf9b3d8c0358f
+model_size_bytes: 64963
+model_uuid: m-e9b0de5bee0f4819989cf9b3d8c0358f
+prompts: null
+run_id: b30edee5869346d18686341964556967
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "string", "name": "sender_email_clean", "required": true}, {"type":
+    "string", "name": "subject_clean", "required": true}, {"type": "string", "name":
+    "sender_domain", "required": true}, {"type": "long", "name": "has_link", "required":
+    true}, {"type": "long", "name": "has_attachment", "required": true}, {"type":
+    "long", "name": "urgency_score", "required": true}, {"type": "long", "name": "spelling_errors",
+    "required": true}, {"type": "long", "name": "email_length_words", "required":
+    true}, {"type": "long", "name": "subject_word_count", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2026-06-04 10:36:35.870834'

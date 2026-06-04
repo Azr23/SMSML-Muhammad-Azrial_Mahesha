@@ -1,0 +1,16 @@
+creation_timestamp: 1780569911094
+current_stage: None
+deployment_job_state: null
+description: ''
+last_updated_timestamp: 1780569911094
+model_id: ''
+name: model
+run_id: b30edee5869346d18686341964556967
+run_link: ''
+source: runs:/b30edee5869346d18686341964556967/model
+status: READY
+status_message: null
+storage_location: runs:/b30edee5869346d18686341964556967/model
+user_id: null
+version: 2
+workspace: default

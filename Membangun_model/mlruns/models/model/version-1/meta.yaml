@@ -1,0 +1,16 @@
+creation_timestamp: 1780568798522
+current_stage: None
+deployment_job_state: null
+description: ''
+last_updated_timestamp: 1780568798522
+model_id: m-34db24d788bc45188f5d4bb27107088c
+name: model
+run_id: f21c06aa53e04090a776b6a8a6647580
+run_link: ''
+source: models:/m-34db24d788bc45188f5d4bb27107088c
+status: READY
+status_message: null
+storage_location: file:///C:/Users/Lenovo/OneDrive/Documents/Praktikum%20dan%20Dokumen/python%20Project/dicoding/Membangun%20Sistem%20ML/SMSML/Membangun_model/mlruns/121754710912968073/models/m-34db24d788bc45188f5d4bb27107088c/artifacts
+user_id: null
+version: 1
+workspace: default

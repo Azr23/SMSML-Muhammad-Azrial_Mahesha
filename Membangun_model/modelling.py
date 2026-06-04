@@ -150,6 +150,7 @@ def main() -> None:
         mlflow.log_param("train_rows", int(x_train.shape[0]))
         mlflow.log_param("test_rows", int(x_test.shape[0]))
         mlflow.log_artifacts(str(ARTIFACT_DIR), artifact_path="artifacts")
+        mlflow.sklearn.log_model(model, artifact_path="model")
 
     print("Training baseline selesai.")
     print(json.dumps(metrics, indent=2))

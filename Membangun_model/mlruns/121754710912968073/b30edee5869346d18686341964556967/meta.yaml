@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/Lenovo/OneDrive/Documents/Praktikum%20dan%20Dokumen/python%20Project/dicoding/Membangun%20Sistem%20ML/SMSML/Membangun_model/mlruns/121754710912968073/b30edee5869346d18686341964556967/artifacts
+end_time: 1780569416469
+entry_point_name: ''
+experiment_id: '121754710912968073'
+lifecycle_stage: active
+run_id: b30edee5869346d18686341964556967
+run_name: baseline_autolog
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780569394936
+status: 3
+tags: []
+user_id: Lenovo
