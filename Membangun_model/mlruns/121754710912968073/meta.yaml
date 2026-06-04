@@ -1,0 +1,9 @@
+artifact_location: file:///C:/Users/Lenovo/OneDrive/Documents/Praktikum%20dan%20Dokumen/python%20Project/dicoding/Membangun%20Sistem%20ML/SMSML/Membangun_model/mlruns/121754710912968073
+creation_time: 1780505609768
+effective_trace_archival_retention: null
+experiment_id: '121754710912968073'
+last_update_time: 1780505609768
+lifecycle_stage: active
+name: phishing_email_detection_basic
+trace_location: null
+workspace: default

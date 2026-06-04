@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/Lenovo/OneDrive/Documents/Praktikum%20dan%20Dokumen/python%20Project/dicoding/Membangun%20Sistem%20ML/SMSML/Membangun_model/mlruns/121754710912968073/models/m-34db24d788bc45188f5d4bb27107088c/artifacts
+creation_timestamp: 1780505612644
+experiment_id: '121754710912968073'
+last_updated_timestamp: 1780505628337
+model_id: m-34db24d788bc45188f5d4bb27107088c
+model_type: null
+name: model
+source_run_id: f21c06aa53e04090a776b6a8a6647580
+status: 2
+status_message: null

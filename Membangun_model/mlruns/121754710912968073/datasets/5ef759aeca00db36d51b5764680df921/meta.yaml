@@ -1,0 +1,13 @@
+digest: 7c72a5b4
+name: dataset
+profile: '{"num_rows": 1200, "num_elements": 10800}'
+schema: '{"mlflow_colspec": [{"type": "string", "name": "sender_email_clean", "required":
+  true}, {"type": "string", "name": "subject_clean", "required": true}, {"type": "string",
+  "name": "sender_domain", "required": true}, {"type": "long", "name": "has_link",
+  "required": true}, {"type": "long", "name": "has_attachment", "required": true},
+  {"type": "long", "name": "urgency_score", "required": true}, {"type": "long", "name":
+  "spelling_errors", "required": true}, {"type": "long", "name": "email_length_words",
+  "required": true}, {"type": "long", "name": "subject_word_count", "required": true}]}'
+source: '{"tags": {"mlflow.user": "Lenovo", "mlflow.source.name": "Membangun_model\\modelling.py",
+  "mlflow.source.type": "LOCAL"}}'
+source_type: code

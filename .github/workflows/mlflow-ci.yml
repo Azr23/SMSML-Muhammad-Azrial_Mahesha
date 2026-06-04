@@ -1,0 +1,58 @@
+name: Membangun_model CI Retraining
+
+on:
+  push:
+    branches: ["main", "master"]
+    paths:
+      - "Membangun_model/**"
+      - "preprocessing/namadataset_preprocessing.csv"
+      - ".github/workflows/mlflow-ci.yml"
+  pull_request:
+    branches: ["main", "master"]
+  workflow_dispatch:
+
+jobs:
+  retrain:
+    runs-on: ubuntu-latest
+    env:
+      MLFLOW_ALLOW_FILE_STORE: "true"
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install training dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install mlflow pandas scikit-learn matplotlib
+
+      - name: Refresh preprocessed dataset in Membangun_model
+        run: |
+          cp preprocessing/namadataset_preprocessing.csv Membangun_model/phishing_email_detection_2026_dataset_preprocessing.csv
+
+      - name: Run baseline training
+        run: |
+          python Membangun_model/modelling.py
+
+      - name: Run tuning training
+        run: |
+          python Membangun_model/modelling_tuning.py
+
+      - name: Validate training artifacts
+        run: |
+          test -f Membangun_model/artifacts/classification_report.json
+          test -f Membangun_model/artifacts/confusion_matrix.png
+          test -f Membangun_model/artifacts/roc_curve.png
+
+      - name: Upload MLflow artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: membangun-model-artifacts
+          path: |
+            Membangun_model/artifacts
+            Membangun_model/mlruns

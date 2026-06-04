@@ -1,0 +1,42 @@
+name: Preprocess Dataset
+
+on:
+  push:
+    branches: ["main", "master"]
+  pull_request:
+    branches: ["main", "master"]
+  workflow_dispatch:
+
+jobs:
+  preprocess:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas
+
+      - name: Run preprocessing script
+        run: |
+          python preprocessing/automate_Muhammad-Azrial.py \
+            --input .workflow/namadataset_raw/phishing_email_detection_2026_dataset.csv \
+            --output preprocessing/phishing_email_detection_2026_dataset_preprocessing.csv
+
+      - name: Validate output dataset
+        run: |
+          test -s preprocessing/phishing_email_detection_2026_dataset_preprocessing.csv
+
+      - name: Upload preprocessed dataset artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: phishing_email_detection_2026_dataset_preprocessing
+          path: preprocessing/phishing_email_detection_2026_dataset_preprocessing.csv

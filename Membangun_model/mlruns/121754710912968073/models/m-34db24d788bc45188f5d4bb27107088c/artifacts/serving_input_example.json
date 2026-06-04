@@ -1,0 +1,72 @@
+{
+  "dataframe_split": {
+    "columns": [
+      "sender_email_clean",
+      "subject_clean",
+      "sender_domain",
+      "has_link",
+      "has_attachment",
+      "urgency_score",
+      "spelling_errors",
+      "email_length_words",
+      "subject_word_count"
+    ],
+    "data": [
+      [
+        "pturner company secure com",
+        "your password will expire",
+        "company-secure.com",
+        1,
+        0,
+        9,
+        6,
+        49,
+        4
+      ],
+      [
+        "elizabeth76 bankverify net",
+        "claim your reward now",
+        "bankverify.net",
+        1,
+        1,
+        7,
+        8,
+        79,
+        4
+      ],
+      [
+        "teresa91 gmail com",
+        "weekly newsletter",
+        "gmail.com",
+        1,
+        1,
+        3,
+        1,
+        116,
+        2
+      ],
+      [
+        "eric46 paypal alert com",
+        "bank account locked",
+        "paypal-alert.com",
+        1,
+        0,
+        8,
+        9,
+        119,
+        3
+      ],
+      [
+        "eharper outlook com",
+        "weekly newsletter",
+        "outlook.com",
+        0,
+        0,
+        1,
+        1,
+        239,
+        2
+      ]
+    ]
+  }
+}
