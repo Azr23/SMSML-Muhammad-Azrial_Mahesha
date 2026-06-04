@@ -35,6 +35,10 @@ jobs:
         run: |
           cp preprocessing/phishing_email_detection_2026_dataset_preprocessing.csv Membangun_model/phishing_email_detection_2026_dataset_preprocessing.csv
 
+      - name: Clean up local mlruns metadata
+        run: |
+          rm -rf Membangun_model/mlruns
+
       - name: Run baseline training
         run: |
           python Membangun_model/modelling.py
