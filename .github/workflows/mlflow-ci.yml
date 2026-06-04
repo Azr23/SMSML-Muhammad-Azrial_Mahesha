@@ -5,7 +5,7 @@ on:
     branches: ["main", "master"]
     paths:
       - "Membangun_model/**"
-      - "preprocessing/namadataset_preprocessing.csv"
+      - "preprocessing/phishing_email_detection_2026_dataset_preprocessing.csv"
       - ".github/workflows/mlflow-ci.yml"
   pull_request:
     branches: ["main", "master"]
@@ -33,7 +33,7 @@ jobs:
 
       - name: Refresh preprocessed dataset in Membangun_model
         run: |
-          cp preprocessing/namadataset_preprocessing.csv Membangun_model/phishing_email_detection_2026_dataset_preprocessing.csv
+          cp preprocessing/phishing_email_detection_2026_dataset_preprocessing.csv Membangun_model/phishing_email_detection_2026_dataset_preprocessing.csv
 
       - name: Run baseline training
         run: |
